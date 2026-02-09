@@ -21,13 +21,13 @@ export default function ServicesPage() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href={LINKS.whatsapp}
-              className="rounded-full bg-dark px-6 py-2.5 text-sm font-medium text-white shadow-md transition-transform hover:scale-[1.02] hover:bg-black"
+              className="rounded-full bg-[#1A1A1A] px-6 py-2.5 text-center text-sm font-medium text-white shadow-md transition-transform hover:scale-[1.02] hover:bg-black"
             >
               {t.servicesPage.ctaBook}
             </Link>
             <Link
               href={LINKS.tel}
-              className="rounded-full border border-dark/40 bg-white px-6 py-2.5 text-sm font-medium text-dark shadow-md transition-colors transition-transform hover:scale-[1.02] hover:border-dark/60"
+              className="rounded-full border border-[#1A1A1A] bg-white px-6 py-2.5 text-center text-sm font-medium text-[#1A1A1A] shadow-md transition-colors transition-transform hover:scale-[1.02] hover:border-black"
             >
               {t.servicesPage.ctaCall}
             </Link>

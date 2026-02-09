@@ -92,7 +92,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="mt-6 w-full rounded-full bg-dark px-6 py-3 text-sm font-medium text-white shadow-md transition-transform hover:scale-[1.02]"
+        className="mt-6 w-full rounded-full border border-[#1A1A1A] bg-white px-6 py-3 text-sm font-medium text-[#1A1A1A] shadow-md transition-colors transition-transform hover:scale-[1.02] hover:border-black"
       >
         {t.contactPage.form.submit}
       </button>
