@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5ece7;
+  color: #1a1a1a;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+language-switcher {
+  cursor: pointer;
+}
