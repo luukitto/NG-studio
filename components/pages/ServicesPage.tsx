@@ -62,7 +62,7 @@ export default function ServicesPage() {
                     <span className="text-xs uppercase tracking-[0.2em] text-dark/50">
                       {item.duration}
                     </span>
-                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-dark/70">
+                    <span className="rounded-full bg-dark px-3 py-1 text-xs font-semibold text-dark shadow-md">
                       {item.price}
                     </span>
                   </div>

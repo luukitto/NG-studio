@@ -45,7 +45,7 @@ export default function ServiceCard({
       <p className="mt-2 text-sm leading-relaxed text-dark/70">
         {description}
       </p>
-      <span className="mt-4 inline-flex w-fit rounded-full bg-secondary px-3 py-1 text-xs font-medium text-dark/70">
+      <span className="mt-4 inline-flex w-fit rounded-full bg-dark px-3 py-1 text-xs font-semibold text-dark shadow-md">
         {price}
       </span>
     </motion.div>

@@ -39,7 +39,15 @@ export const OPENING_HOURS_SPEC = [
 export const LOGO_IMAGE = withBasePath("/logo.png");
 
 // Hero and gallery images (stored in public/gallery).
-export const HERO_IMAGE = withBasePath("/gallery/hero.png");
+export const HERO_IMAGES = [
+  withBasePath("/gallery/hero.png"),
+  withBasePath("/gallery/studio-sign.png"),
+  withBasePath("/gallery/bridal-makeup.png"),
+  withBasePath("/gallery/reception.png"),
+];
+
+// First hero image used for metadata.
+export const HERO_IMAGE = HERO_IMAGES[0];
 
 export const GALLERY_IMAGES = [
   {

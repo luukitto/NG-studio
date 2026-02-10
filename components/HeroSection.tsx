@@ -1,22 +1,47 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { HERO_IMAGE, LINKS } from "@/lib/constants";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { HERO_IMAGES, LINKS } from "@/lib/constants";
 import { useLanguage } from "@/components/LanguageProvider";
+
+const SLIDE_DURATION_MS = 3000;
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (HERO_IMAGES.length <= 1) return;
+    const id = window.setInterval(() => {
+      setIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, SLIDE_DURATION_MS);
+    return () => window.clearInterval(id);
+  }, []);
+
+  const currentSrc = HERO_IMAGES[index] ?? HERO_IMAGES[0];
 
   return (
     <section className="relative h-[80vh] min-h-[520px] overflow-hidden">
-      <Image
-        src={HERO_IMAGE}
-        alt="NB Beauty Studio"
-        fill
-        priority
-        className="object-cover"
-      />
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSrc}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={currentSrc}
+            alt="NB Beauty Studio"
+            fill
+            priority
+            className="object-cover"
+          />
+        </motion.div>
+      </AnimatePresence>
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
 
       <div className="relative z-10 flex h-full items-center">
