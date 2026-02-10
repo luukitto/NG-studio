@@ -61,18 +61,18 @@ export default function HeroSection() {
             <p className="mt-4 text-sm leading-relaxed text-dark/70 sm:text-base">
               {t.hero.description}
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-nowrap justify-center gap-3 sm:justify-start">
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 href={LINKS.whatsapp}
-                className="rounded-full bg-dark px-6 py-2.5 text-sm font-medium text-white shadow-md transition hover:bg-black sm:text-base"
+                className="min-w-[140px] rounded-full bg-dark px-6 py-2.5 text-center text-sm font-medium text-white shadow-md transition hover:bg-black sm:text-base"
               >
                 {t.hero.ctaBook}
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 href={LINKS.tel}
-                className="rounded-full border border-dark/20 bg-white/70 px-6 py-2.5 text-sm font-medium text-dark transition hover:border-dark/40 sm:text-base"
+                className="min-w-[140px] rounded-full border border-dark/20 bg-white/70 px-6 py-2.5 text-center text-sm font-medium text-dark transition hover:border-dark/40 sm:text-base"
               >
                 {t.hero.ctaCall}
               </motion.a>
